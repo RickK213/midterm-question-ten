@@ -11,7 +11,11 @@ namespace SodaMachine
         static void Main(string[] args)
         {
             SodaMachine sodaMachine = new SodaMachine();
-            sodaMachine.Run();
+            List<Coin> myMoney = new List<Coin>();
+            myMoney.Add(new Quarter());
+            myMoney.Add(new Quarter());
+            myMoney.Add(new Nickel());
+            sodaMachine.MakeTransaction(myMoney, new LemonSoda());
             Console.ReadKey();
         }
     }
