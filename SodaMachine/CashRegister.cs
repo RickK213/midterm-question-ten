@@ -9,10 +9,10 @@ namespace SodaMachine
     public class CashRegister
     {
         //member variables
-        List<Coin> pennies;
-        List<Coin> nickels;
-        List<Coin> dimes;
-        List<Coin> quarters;
+        public List<Coin> pennies;
+        public List<Coin> nickels;
+        public List<Coin> dimes;
+        public List<Coin> quarters;
 
         //constructor
         public CashRegister()
@@ -88,36 +88,36 @@ namespace SodaMachine
                 Console.WriteLine("Sorry, not enough pennies to make change!");
                 return false;
             }
-            else
+            if ( numberOfPennies > 0 )
             {
-                pennies.RemoveRange(0, numberOfPennies-1);
+                pennies.RemoveRange(0, numberOfPennies);
             }
             if (nickels.Count < numberOfNickels)
             {
                 Console.WriteLine("Sorry, not enough nickels to make change!");
                 return false;
             }
-            else
+            if (numberOfNickels > 0)
             {
-                nickels.RemoveRange(0, numberOfNickels-1);
+                nickels.RemoveRange(0, numberOfNickels);
             }
             if (dimes.Count < numberOfDimes)
             {
                 Console.WriteLine("Sorry, not enough dimes to make change!");
                 return false;
             }
-            else
+            if (numberOfDimes > 0)
             {
-                dimes.RemoveRange(0, numberOfDimes - 1);
+                dimes.RemoveRange(0, numberOfDimes);
             }
             if (quarters.Count < numberOfQuarters)
             {
                 Console.WriteLine("Sorry, not enough quarters to make change!");
                 return false;
             }
-            else
+            if (numberOfQuarters > 0)
             {
-                quarters.RemoveRange(0, numberOfQuarters - 1);
+                quarters.RemoveRange(0, numberOfQuarters);
             }
             return true;
         }

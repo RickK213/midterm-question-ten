@@ -9,9 +9,9 @@ namespace SodaMachine
     class Inventory
     {
         //member variables
-        List<Soda> grapeSodas;
-        List<Soda> orangeSodas;
-        List<Soda> lemonSodas;
+        public List<Soda> grapeSodas;
+        public List<Soda> orangeSodas;
+        public List<Soda> lemonSodas;
         int initialStockAmount = 50;
 
         //constructor
