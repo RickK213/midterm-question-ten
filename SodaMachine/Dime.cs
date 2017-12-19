@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace SodaMachine
 {
-    class Program
+    class Dime : Coin
     {
-        static void Main(string[] args)
+        //member variables
+
+        //constructor
+        public Dime()
         {
-            SodaMachine sodaMachine = new SodaMachine();
-            sodaMachine.Run();
-            Console.ReadKey();
+            value = .10m;
+            name = "Dime";
         }
+
+        //member methods
     }
 }
